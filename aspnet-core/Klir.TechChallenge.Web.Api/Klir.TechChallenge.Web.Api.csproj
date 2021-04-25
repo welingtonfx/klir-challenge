@@ -11,5 +11,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Klir.TechChallenge.Data\Klir.TechChallenge.Data.csproj" />
+    <ProjectReference Include="..\Klir.TechChallenge.Domain\Klir.TechChallenge.Domain.csproj" />
+    <ProjectReference Include="..\Klir.TechChallenge.Infra\Klir.TechChallenge.Infra.csproj" />
+  </ItemGroup>
+
 
 </Project>
