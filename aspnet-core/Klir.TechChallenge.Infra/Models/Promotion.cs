@@ -5,7 +5,6 @@ namespace Klir.TechChallenge.Infra.Models
     public class Promotion
     {
         public int Id { get; set; }
-        public int ProductId { get; set; }
         public PromotionTypeEnum PromotionType { get; set; }
     }
 }

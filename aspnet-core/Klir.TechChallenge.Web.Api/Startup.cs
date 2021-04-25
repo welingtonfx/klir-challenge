@@ -1,3 +1,5 @@
+using Klir.TechChallenge.Data.Interfaces;
+using Klir.TechChallenge.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -36,6 +38,10 @@ namespace KlirTechChallenge.Web.Api
             });
 
             services.AddControllers();
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IPromotionRepository, PromotionRepository>();
+            services.AddScoped<IProductPromotionRepository, ProductPromotionRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
