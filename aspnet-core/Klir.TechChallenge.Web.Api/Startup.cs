@@ -1,16 +1,12 @@
 using Klir.TechChallenge.Data.Interfaces;
 using Klir.TechChallenge.Data.Services;
+using Klir.TechChallenge.Domain.Interfaces;
+using Klir.TechChallenge.Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace KlirTechChallenge.Web.Api
 {
@@ -42,6 +38,7 @@ namespace KlirTechChallenge.Web.Api
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IPromotionRepository, PromotionRepository>();
             services.AddScoped<IProductPromotionRepository, ProductPromotionRepository>();
+            services.AddScoped<ICartService, CartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

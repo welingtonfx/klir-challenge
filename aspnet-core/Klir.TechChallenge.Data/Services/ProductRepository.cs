@@ -1,9 +1,7 @@
 ﻿using Klir.TechChallenge.Data.FakeData;
 using Klir.TechChallenge.Data.Interfaces;
 using Klir.TechChallenge.Infra.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace Klir.TechChallenge.Data.Services

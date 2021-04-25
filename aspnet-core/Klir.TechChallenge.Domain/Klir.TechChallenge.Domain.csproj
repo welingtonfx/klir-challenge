@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Klir.TechChallenge.Data\Klir.TechChallenge.Data.csproj" />
     <ProjectReference Include="..\Klir.TechChallenge.Infra\Klir.TechChallenge.Infra.csproj" />
   </ItemGroup>
