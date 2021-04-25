@@ -15,7 +15,10 @@ namespace Klir.TechChallenge.Domain.Promotions
             var timesToChargeFullPrice = item.Amount % 2;
 
             if (timesToChargeByPromotion > 0)
+            {
+                item.SetPromotion();
                 item.FinalPrice = item.OriginalPrice * timesToChargeByPromotion;
+            }
 
             if (timesToChargeFullPrice > 0)
                 item.FinalPrice += item.OriginalPrice * timesToChargeFullPrice;

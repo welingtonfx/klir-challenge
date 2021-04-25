@@ -10,21 +10,34 @@ namespace Klir.TechChallenge.Domain.Services
     public class CartService : ICartService
     {
         private readonly IProductPromotionRepository _productPromotionRepository;
+        private readonly IProductRepository _productRepository;
 
-        public CartService(IProductPromotionRepository productPromotionRepository)
+        public CartService(IProductPromotionRepository productPromotionRepository,
+            IProductRepository productRepository)
         {
             _productPromotionRepository = productPromotionRepository;
+            _productRepository = productRepository;
         }
 
-        public CartItem ApplyCartItemPromotion(CartItem item)
+        public CartItem RecalculateItemPrice(CartItem item)
         {
+            CalculateProductGrossPrice(item);
             var productPromotion = GetProductPromotion(item.ProductId);
+            item.SetNoPromotion();
 
-            if (productPromotion != null)
+            if (productPromotion == null)
                 return item;
 
-            ApplyPromotion(item, productPromotion.ProductId);
+            ApplyPromotion(item, productPromotion.PromotionId);
 
+            return item;
+        }
+
+        private CartItem CalculateProductGrossPrice(CartItem item)
+        {
+            var product = _productRepository.GetProductById(item.ProductId);
+            item.OriginalPrice = product.Price;
+            item.FinalPrice = item.OriginalPrice * item.Amount;
             return item;
         }
 

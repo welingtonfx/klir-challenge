@@ -17,7 +17,7 @@ namespace KlirTechChallenge.Web.Api.Controllers
 
         public IActionResult ApplyProductPromotion(CartItem item)
         {
-            _cartService.
+            return Ok();
         }
     }
 }

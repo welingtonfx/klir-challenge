@@ -13,5 +13,15 @@ namespace Klir.TechChallenge.Infra.ViewModels
         public decimal OriginalPrice { get; set; }
         public decimal FinalPrice { get; set; }
         public decimal Amount { get; set; }
+
+        public void SetNoPromotion()
+        {
+            this.IsPromotion = false;
+        }
+
+        public void SetPromotion()
+        {
+            this.IsPromotion = true;
+        }
     }
 }

@@ -6,5 +6,7 @@
         decimal OriginalPrice { get; set; }
         decimal FinalPrice { get; set; }
         decimal Amount { get; set; }
+
+        void SetPromotion();
     }
 }

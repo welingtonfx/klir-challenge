@@ -12,10 +12,11 @@ namespace Klir.TechChallenge.Domain.Promotions
                 return item;
 
             var timesToApplyPromotion = Math.Truncate(item.Amount / 3);
-            var timesToChargeFullPrice = item.Amount % 2;
+            var timesToChargeFullPrice = item.Amount % 3;
 
             item.FinalPrice = (timesToApplyPromotion * 10m) + (timesToChargeFullPrice * item.OriginalPrice);
 
+            item.SetPromotion();
             return item;
         }
     }

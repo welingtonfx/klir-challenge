@@ -4,6 +4,6 @@ namespace Klir.TechChallenge.Domain.Interfaces
 {
     public interface ICartService
     {
-        CartItem ApplyCartItemPromotion(CartItem item);
+        CartItem RecalculateItemPrice(CartItem item);
     }
 }
