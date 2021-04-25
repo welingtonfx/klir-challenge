@@ -23,14 +23,21 @@ namespace Klir.TechChallenge.Domain.Services
             if (productPromotion != null)
                 return item;
 
-            var applicator = PromotionFactory.GetPromotionApplicator((PromotionTypeEnum)productPromotion.PromotionId);
-            applicator.Apply(item);
+            ApplyPromotion(item, productPromotion.ProductId);
+
             return item;
         }
 
         private ProductPromotion GetProductPromotion(int productId)
         {
             return _productPromotionRepository.GetProductPromotion(productId);
+        }
+
+        private CartItem ApplyPromotion(CartItem item, int promotionId)
+        {
+            var applicator = PromotionFactory.GetPromotionApplicator((PromotionTypeEnum)promotionId);
+            applicator.Apply(item);
+            return item;
         }
     }
 }

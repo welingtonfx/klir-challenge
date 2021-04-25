@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Klir.TechChallenge.Infra.ViewModels;
 
 namespace Klir.TechChallenge.Domain.Interfaces
 {
     public interface ICartService
     {
+        CartItem ApplyCartItemPromotion(CartItem item);
     }
 }
