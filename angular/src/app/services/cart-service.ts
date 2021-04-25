@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+import Decimal from 'decimal.js';
 import { Cart, CartItem } from '../models/cart';
 import { Product } from '../models/product';
 
@@ -29,7 +30,7 @@ export class CartService {
 		if (!itemToUpdate)
 			return;
 
-		itemToUpdate.amount += 1;
+		itemToUpdate.amount = new Decimal(itemToUpdate.amount).plus(1).toNumber();
 
 		this.recalculateItemPrice(itemToUpdate);
     }	
@@ -45,7 +46,7 @@ export class CartService {
 			return
 		}
 
-		itemToUpdate.amount -= 1;
+		itemToUpdate.amount = new Decimal(itemToUpdate.amount).minus(1).toNumber();
 		this.recalculateItemPrice(itemToUpdate);
 	}
 
@@ -67,7 +68,7 @@ export class CartService {
 
 	private getNewCartItemId(): number {
 		if (this.cart && this.cart.items && this.cart.items.length > 0)
-			return Math.max(...this.cart.items.map(p => p.id)) + 1;
+			return new Decimal(Math.max(...this.cart.items.map(p => p.id))).plus(1).toNumber();
 
 		return 1;
 	}
