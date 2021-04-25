@@ -14,6 +14,7 @@ namespace KlirTechChallenge.Web.Api.Controllers
             _productRepository = productRepository;
         }
 
+        [HttpGet("getproducts")]
         public IActionResult GetProducts()
         {
             var products = _productRepository.GetProducts();

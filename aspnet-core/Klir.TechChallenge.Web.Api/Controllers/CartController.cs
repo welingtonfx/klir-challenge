@@ -15,9 +15,12 @@ namespace KlirTechChallenge.Web.Api.Controllers
             _cartService = cartService;
         }
 
-        public IActionResult ApplyProductPromotion(CartItem item)
+        [HttpPost("recalculateitemprice")]
+        public IActionResult RecalculateItemPrice(CartItem item)
         {
-            return Ok();
+            var recalculatedItem = _cartService.RecalculateItemPrice(item);
+
+            return Ok(recalculatedItem);
         }
     }
 }
