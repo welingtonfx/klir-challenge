@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\KlirTechChallenge\\angular\\Klir.TechChallenge.Web.Front.csproj",
+      "projectUniqueName": "C:\\KlirTechChallenge\\klir-challenge\\angular\\Klir.TechChallenge.Web.Front.csproj",
       "projectName": "Klir.TechChallenge.Web.Front",
-      "projectPath": "C:\\KlirTechChallenge\\angular\\Klir.TechChallenge.Web.Front.csproj",
+      "projectPath": "C:\\KlirTechChallenge\\klir-challenge\\angular\\Klir.TechChallenge.Web.Front.csproj",
       "packagesPath": "C:\\Users\\Welington\\.nuget\\packages\\",
-      "outputPath": "C:\\KlirTechChallenge\\angular\\obj\\",
+      "outputPath": "C:\\KlirTechChallenge\\klir-challenge\\angular\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

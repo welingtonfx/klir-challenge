@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GWgRiP05I2EQgF2S0ozyG2TVYk3+jR6piu3mVwjoT01W/JnYG2iL5tygmaHx5TfBnwZOqj/Z6j5dI89fmaw3DA==",
+  "dgSpecHash": "fQo7WVdRM3V2nyQ8HMCN4dWLM11R9hZEync1mZtiDj6CjQYJhw/LDcEHW3NWy9nuRPcvyEdzhqUTRg4wR+f6zg==",
   "success": true,
-  "projectFilePath": "C:\\KlirTechChallenge\\angular\\Klir.TechChallenge.Web.Front.csproj",
+  "projectFilePath": "C:\\KlirTechChallenge\\klir-challenge\\angular\\Klir.TechChallenge.Web.Front.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
